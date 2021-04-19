@@ -1,3 +1,3 @@
 version: "1"
 domain: crossplane.io
-repo: github.com/crossplane/provider-gcp
+repo: github.com/crossplane/provider-gcp-beta

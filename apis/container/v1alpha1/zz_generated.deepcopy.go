@@ -22,7 +22,7 @@ package v1alpha1
 
 import (
 	"github.com/crossplane/crossplane-runtime/apis/common/v1"
-	"github.com/crossplane/provider-gcp/apis/container/v1beta1"
+	"github.com/crossplane/provider-gcp-beta/apis/container/v1beta1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
 

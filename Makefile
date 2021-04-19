@@ -1,7 +1,7 @@
 # ====================================================================================
 # Setup Project
 
-PROJECT_NAME := provider-gcp
+PROJECT_NAME := provider-gcp-beta
 PROJECT_REPO := github.com/crossplane/$(PROJECT_NAME)
 
 PLATFORMS ?= linux_amd64 linux_arm64
@@ -43,7 +43,7 @@ GO111MODULE = on
 # Setup Images
 
 DOCKER_REGISTRY = crossplane
-IMAGES = provider-gcp provider-gcp-controller
+IMAGES = provider-gcp-beta provider-gcp-beta-controller
 -include build/makelib/image.mk
 
 # ====================================================================================

@@ -28,8 +28,8 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/test"
 
-	"github.com/crossplane/provider-gcp/apis/container/v1beta1"
-	gcp "github.com/crossplane/provider-gcp/pkg/clients"
+	"github.com/crossplane/provider-gcp-beta/apis/container/v1beta1"
+	gcp "github.com/crossplane/provider-gcp-beta/pkg/clients"
 )
 
 const (
