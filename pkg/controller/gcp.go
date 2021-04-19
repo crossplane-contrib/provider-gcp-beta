@@ -32,23 +32,9 @@ import (
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter) error{
 		config.Setup,
-		cache.SetupCloudMemorystoreInstance,
-		compute.SetupGlobalAddress,
-		compute.SetupNetwork,
-		compute.SetupSubnetwork,
 		container.SetupGKECluster,
 		container.SetupNodePool,
 		database.SetupCloudSQLInstance,
-		iam.SetupServiceAccount,
-		iam.SetupServiceAccountPolicy,
-		kms.SetupKeyRing,
-		kms.SetupCryptoKey,
-		kms.SetupCryptoKeyPolicy,
-		pubsub.SetupTopic,
-		servicenetworking.SetupConnection,
-		storage.SetupBucket,
-		storage.SetupBucketPolicy,
-		storage.SetupBucketPolicyMember,
 	} {
 		if err := setup(mgr, l, rl); err != nil {
 			return err

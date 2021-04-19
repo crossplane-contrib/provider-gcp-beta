@@ -385,27 +385,6 @@ spec:
                         description: "Provider: The selected network policy provider. \n Possible values:   \"PROVIDER_UNSPECIFIED\" - Not set   \"CALICO\" - Tigera (Calico Felix)."
                         type: string
                     type: object
-                  networkRef:
-                    description: NetworkRef references to a Network and retrieves its URI
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                    required:
-                    - name
-                    type: object
-                  networkSelector:
-                    description: NetworkSelector selects a reference to a Network and retrieves its URI
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                    type: object
                   podSecurityPolicyConfig:
                     description: 'PodSecurityPolicyConfig: Configuration for the PodSecurityPolicy feature.'
                     properties:
@@ -464,27 +443,6 @@ spec:
                   subnetwork:
                     description: 'Subnetwork: The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks) to which the cluster is connected.'
                     type: string
-                  subnetworkRef:
-                    description: SubnetworkRef references to a Subnetwork and retrieves its URI
-                    properties:
-                      name:
-                        description: Name of the referenced object.
-                        type: string
-                    required:
-                    - name
-                    type: object
-                  subnetworkSelector:
-                    description: SubnetworkSelector selects a reference to a Subnetwork and retrieves its URI
-                    properties:
-                      matchControllerRef:
-                        description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
-                        type: boolean
-                      matchLabels:
-                        additionalProperties:
-                          type: string
-                        description: MatchLabels ensures an object with matching labels is selected.
-                        type: object
-                    type: object
                   tierSettings:
                     description: 'TierSettings: Cluster tier settings.'
                     properties:

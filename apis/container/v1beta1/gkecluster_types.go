@@ -232,16 +232,6 @@ type GKEClusterParameters struct {
 	// +immutable
 	Network *string `json:"network,omitempty"`
 
-	// NetworkRef references to a Network and retrieves its URI
-	// +optional
-	// +immutable
-	NetworkRef *xpv1.Reference `json:"networkRef,omitempty"`
-
-	// NetworkSelector selects a reference to a Network and retrieves its URI
-	// +optional
-	// +immutable
-	NetworkSelector *xpv1.Selector `json:"networkSelector,omitempty"`
-
 	// NOTE(hasheddan): only intranode visibility can be updated in
 	// NetworkConfig
 	// https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/ClusterUpdate?authuser=1#IntraNodeVisibilityConfig
@@ -288,17 +278,6 @@ type GKEClusterParameters struct {
 	// +optional
 	// +immutable
 	Subnetwork *string `json:"subnetwork,omitempty"`
-
-	// SubnetworkRef references to a Subnetwork and retrieves its URI
-	// +optional
-	// +immutable
-	SubnetworkRef *xpv1.Reference `json:"subnetworkRef,omitempty"`
-
-	// SubnetworkSelector selects a reference to a Subnetwork and retrieves its
-	// URI
-	// +optional
-	// +immutable
-	SubnetworkSelector *xpv1.Selector `json:"subnetworkSelector,omitempty"`
 
 	// TierSettings: Cluster tier settings.
 	// +optional
