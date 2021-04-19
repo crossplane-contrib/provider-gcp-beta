@@ -16,6 +16,6 @@ limitations under the License.
 
 // Package v1alpha3 contains the core resources of the Google Cloud Platform.
 // +kubebuilder:object:generate=true
-// +groupName=gcp.crossplane.io
+// +groupName=beta.gcp.crossplane.io
 // +versionName=v1alpha3
 package v1alpha3

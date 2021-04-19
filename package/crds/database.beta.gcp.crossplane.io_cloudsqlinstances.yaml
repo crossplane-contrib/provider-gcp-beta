@@ -4,9 +4,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.3.0
   creationTimestamp: null
-  name: cloudsqlinstances.database.gcp.crossplane.io
+  name: cloudsqlinstances.database.beta.gcp.crossplane.io
 spec:
-  group: database.gcp.crossplane.io
+  group: database.beta.gcp.crossplane.io
   names:
     categories:
     - crossplane

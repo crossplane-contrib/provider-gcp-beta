@@ -17,6 +17,6 @@ limitations under the License.
 // Package v1beta1 contains managed resources for GCP database services such as
 // CloudSQL.
 // +kubebuilder:object:generate=true
-// +groupName=database.gcp.crossplane.io
+// +groupName=database.beta.gcp.crossplane.io
 // +versionName=v1beta1
 package v1beta1
