@@ -21,7 +21,6 @@ limitations under the License.
 package v1beta1
 
 import (
-	"github.com/crossplane/crossplane-runtime/apis/common/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 )
 
@@ -610,16 +609,6 @@ func (in *GKEClusterParameters) DeepCopyInto(out *GKEClusterParameters) {
 		*out = new(string)
 		**out = **in
 	}
-	if in.NetworkRef != nil {
-		in, out := &in.NetworkRef, &out.NetworkRef
-		*out = new(v1.Reference)
-		**out = **in
-	}
-	if in.NetworkSelector != nil {
-		in, out := &in.NetworkSelector, &out.NetworkSelector
-		*out = new(v1.Selector)
-		(*in).DeepCopyInto(*out)
-	}
 	if in.NetworkConfig != nil {
 		in, out := &in.NetworkConfig, &out.NetworkConfig
 		*out = new(NetworkConfigSpec)
@@ -656,16 +645,6 @@ func (in *GKEClusterParameters) DeepCopyInto(out *GKEClusterParameters) {
 		in, out := &in.Subnetwork, &out.Subnetwork
 		*out = new(string)
 		**out = **in
-	}
-	if in.SubnetworkRef != nil {
-		in, out := &in.SubnetworkRef, &out.SubnetworkRef
-		*out = new(v1.Reference)
-		**out = **in
-	}
-	if in.SubnetworkSelector != nil {
-		in, out := &in.SubnetworkSelector, &out.SubnetworkSelector
-		*out = new(v1.Selector)
-		(*in).DeepCopyInto(*out)
 	}
 	if in.TierSettings != nil {
 		in, out := &in.TierSettings, &out.TierSettings

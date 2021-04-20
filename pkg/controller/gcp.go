@@ -22,16 +22,9 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 
-	"github.com/crossplane/provider-gcp/pkg/controller/cache"
-	"github.com/crossplane/provider-gcp/pkg/controller/compute"
-	"github.com/crossplane/provider-gcp/pkg/controller/config"
-	"github.com/crossplane/provider-gcp/pkg/controller/container"
-	"github.com/crossplane/provider-gcp/pkg/controller/database"
-	"github.com/crossplane/provider-gcp/pkg/controller/iam"
-	"github.com/crossplane/provider-gcp/pkg/controller/kms"
-	"github.com/crossplane/provider-gcp/pkg/controller/pubsub"
-	"github.com/crossplane/provider-gcp/pkg/controller/servicenetworking"
-	"github.com/crossplane/provider-gcp/pkg/controller/storage"
+	"github.com/crossplane/provider-gcp-beta/pkg/controller/config"
+	"github.com/crossplane/provider-gcp-beta/pkg/controller/container"
+	"github.com/crossplane/provider-gcp-beta/pkg/controller/database"
 )
 
 // Setup creates all GCP controllers with the supplied logger and adds them to
@@ -39,23 +32,9 @@ import (
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter) error{
 		config.Setup,
-		cache.SetupCloudMemorystoreInstance,
-		compute.SetupGlobalAddress,
-		compute.SetupNetwork,
-		compute.SetupSubnetwork,
 		container.SetupGKECluster,
 		container.SetupNodePool,
 		database.SetupCloudSQLInstance,
-		iam.SetupServiceAccount,
-		iam.SetupServiceAccountPolicy,
-		kms.SetupKeyRing,
-		kms.SetupCryptoKey,
-		kms.SetupCryptoKeyPolicy,
-		pubsub.SetupTopic,
-		servicenetworking.SetupConnection,
-		storage.SetupBucket,
-		storage.SetupBucketPolicy,
-		storage.SetupBucketPolicyMember,
 	} {
 		if err := setup(mgr, l, rl); err != nil {
 			return err

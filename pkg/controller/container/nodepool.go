@@ -35,9 +35,9 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/reconciler/managed"
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	"github.com/crossplane/provider-gcp/apis/container/v1alpha1"
-	gcp "github.com/crossplane/provider-gcp/pkg/clients"
-	np "github.com/crossplane/provider-gcp/pkg/clients/nodepool"
+	"github.com/crossplane/provider-gcp-beta/apis/container/v1alpha1"
+	gcp "github.com/crossplane/provider-gcp-beta/pkg/clients"
+	np "github.com/crossplane/provider-gcp-beta/pkg/clients/nodepool"
 )
 
 // Error strings.

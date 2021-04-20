@@ -1,7 +1,7 @@
-# Building and Installing the Crossplane GCP Provider
+# Building and Installing the Crossplane GCP Beta Provider
 
-`provider-gcp` is composed of a golang project and can be built directly with
-standard `golang` tools. We currently support two different platforms for
+`provider-gcp-beta` is composed of a golang project and can be built directly
+with standard `golang` tools. We currently support two different platforms for
 building:
 
 * Linux: most modern distros should work although most testing has been done on

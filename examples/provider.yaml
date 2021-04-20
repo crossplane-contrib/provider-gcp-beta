@@ -1,6 +1,6 @@
 apiVersion: pkg.crossplane.io/v1
 kind: Provider
 metadata:
-  name: provider-gcp
+  name: provider-gcp-beta
 spec:
-  package: crossplane/provider-gcp:alpha
+  package: crossplane/provider-gcp-beta:alpha

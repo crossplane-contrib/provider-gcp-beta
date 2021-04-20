@@ -19,10 +19,7 @@ package gcp
 import (
 	"context"
 	"net/http"
-	"path"
-	"strings"
 
-	"github.com/google/go-cmp/cmp"
 	"github.com/pkg/errors"
 	"google.golang.org/api/googleapi"
 	"google.golang.org/api/option"
@@ -34,9 +31,8 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	cmpv1beta1 "github.com/crossplane/provider-gcp/apis/compute/v1beta1"
-	"github.com/crossplane/provider-gcp/apis/v1alpha3"
-	"github.com/crossplane/provider-gcp/apis/v1beta1"
+	"github.com/crossplane/provider-gcp-beta/apis/v1alpha3"
+	"github.com/crossplane/provider-gcp-beta/apis/v1beta1"
 )
 
 // GetAuthInfo returns the necessary authentication information that is necessary
@@ -210,36 +206,4 @@ func LateInitializeStringMap(s map[string]string, from map[string]string) map[st
 		return s
 	}
 	return from
-}
-
-// EquateComputeURLs considers compute APIs to be equal whether they are fully
-// qualified, partially qualified, or unqualified. The compute API will accept
-// unqualified or partially qualified URLs for certain fields, but return fully
-// qualified URLs. For example it may accept 'us-central1' but return
-// 'https://www.googleapis.com/compute/v1/projects/example/regions/us-central1'.
-// 'projects/example/global/networks/eg' is also valid, but the API may return
-// 'https://www.googleapis.com/compute/v1/projects/example/global/networks/eg'.
-func EquateComputeURLs() cmp.Option {
-	return cmp.Comparer(func(a, b string) bool {
-		if a == b {
-			return true
-		}
-
-		if !strings.HasPrefix(a, cmpv1beta1.ComputeURIPrefix) && !strings.HasPrefix(b, cmpv1beta1.ComputeURIPrefix) {
-			return a == b
-		}
-
-		ta := strings.TrimPrefix(a, cmpv1beta1.ComputeURIPrefix)
-		tb := strings.TrimPrefix(b, cmpv1beta1.ComputeURIPrefix)
-
-		// Partially qualified URLs are considered equal to their corresponding
-		// fully qualified URLs.
-		if ta == tb {
-			return true
-		}
-
-		// Completely unqualified names should be considered equal to their
-		// partial or fully qualified equivalents.
-		return path.Base(ta) == path.Base(tb)
-	})
 }

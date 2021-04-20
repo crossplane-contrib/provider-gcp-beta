@@ -24,7 +24,7 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/reference"
 
-	"github.com/crossplane/provider-gcp/apis/container/v1beta1"
+	"github.com/crossplane/provider-gcp-beta/apis/container/v1beta1"
 )
 
 // ResolveReferences of this NodePool

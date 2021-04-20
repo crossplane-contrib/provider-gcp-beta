@@ -356,15 +356,6 @@ type IPConfiguration struct {
 	// +optional
 	PrivateNetwork *string `json:"privateNetwork,omitempty"`
 
-	// PrivateNetworkRef sets the PrivateNetwork field by resolving the resource
-	// link of the referenced Crossplane Network managed resource.
-	// +optional
-	PrivateNetworkRef *xpv1.Reference `json:"privateNetworkRef,omitempty"`
-
-	// PrivateNetworkSelector selects a PrivateNetworkRef.
-	// +optional
-	PrivateNetworkSelector *xpv1.Selector `json:"privateNetworkSelector,omitempty"`
-
 	// RequireSsl: Whether SSL connections over IP should be enforced or
 	// not.
 	// +optional
