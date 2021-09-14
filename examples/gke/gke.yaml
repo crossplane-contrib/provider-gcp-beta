@@ -62,7 +62,7 @@ spec:
         sandboxType: gvisor
       diskSizeGb: 120
       diskType: pd-ssd
-      imageType: cos_containerd
+      imageType: COS_CONTAINERD
       labels:
         test-label: crossplane-created
       machineType: n1-standard-2
