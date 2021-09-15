@@ -106,13 +106,13 @@ type NodePoolParameters struct {
 	Cluster string `json:"cluster,omitempty"`
 
 	// ClusterRef sets the Cluster field by resolving the resource link of the
-	// referenced Crossplane GKECluster managed resource.
+	// referenced Crossplane Cluster managed resource.
 	// +immutable
 	// +optional
 	ClusterRef *xpv1.Reference `json:"clusterRef,omitempty"`
 
 	// ClusterSelector selects a reference to resolve the resource link of the
-	// referenced Crossplane GKECluster managed resource.
+	// referenced Crossplane Cluster managed resource.
 	// +immutable
 	// +optional
 	ClusterSelector *xpv1.Selector `json:"clusterSelector,omitempty"`
@@ -489,7 +489,7 @@ type WorkloadMetadataConfig struct {
 	//
 	// Possible values:
 	//   "UNSPECIFIED" - Not set.
-	//   "SECURE" - Prevent workloads not in hostGKECluster from accessing
+	//   "SECURE" - Prevent workloads not in hostCluster from accessing
 	// certain VM metadata,
 	// specifically kube-env, which contains Kubelet credentials, and
 	// the

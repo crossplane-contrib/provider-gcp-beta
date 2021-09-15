@@ -32,7 +32,7 @@ import (
 func Setup(mgr ctrl.Manager, l logging.Logger, rl workqueue.RateLimiter) error {
 	for _, setup := range []func(ctrl.Manager, logging.Logger, workqueue.RateLimiter) error{
 		config.Setup,
-		container.SetupGKECluster,
+		container.SetupCluster,
 		container.SetupNodePool,
 		database.SetupCloudSQLInstance,
 	} {

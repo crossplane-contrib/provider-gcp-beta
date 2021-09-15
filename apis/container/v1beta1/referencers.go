@@ -23,10 +23,10 @@ import (
 	resource "github.com/crossplane/crossplane-runtime/pkg/resource"
 )
 
-// GKEClusterURL extracts the partially qualified URL of a GKECluster.
-func GKEClusterURL() reference.ExtractValueFn {
+// ClusterURL extracts the partially qualified URL of a Cluster.
+func ClusterURL() reference.ExtractValueFn {
 	return func(mg resource.Managed) string {
-		c, ok := mg.(*GKECluster)
+		c, ok := mg.(*Cluster)
 		if !ok {
 			return ""
 		}

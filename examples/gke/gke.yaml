@@ -1,5 +1,5 @@
-apiVersion: container.gcp.crossplane.io/v1beta1
-kind: GKECluster
+apiVersion: container.beta.gcp.crossplane.io/v1beta1
+kind: Cluster
 metadata:
   name: example-cluster
 spec:
@@ -44,7 +44,7 @@ spec:
     podSecurityPolicyConfig:
       enabled: true
 ---
-apiVersion: container.gcp.crossplane.io/v1alpha1
+apiVersion: container.beta.gcp.crossplane.io/v1alpha1
 kind: NodePool
 metadata:
   name: crossplane-np
@@ -58,12 +58,11 @@ spec:
     clusterRef:
       name: example-cluster
     config:
-      machineType: n1-standard-1
       sandboxConfig:
         sandboxType: gvisor
       diskSizeGb: 120
       diskType: pd-ssd
-      imageType: cos_containerd
+      imageType: COS_CONTAINERD
       labels:
         test-label: crossplane-created
       machineType: n1-standard-2

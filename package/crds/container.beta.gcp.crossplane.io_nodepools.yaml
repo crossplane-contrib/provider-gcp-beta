@@ -81,7 +81,7 @@ spec:
                     description: 'Cluster: The resource link for the GKE cluster to which the NodePool will attach. Must be of format projects/projectID/locations/clusterLocation/clusters/clusterName. Must be supplied if ClusterRef is not.'
                     type: string
                   clusterRef:
-                    description: ClusterRef sets the Cluster field by resolving the resource link of the referenced Crossplane GKECluster managed resource.
+                    description: ClusterRef sets the Cluster field by resolving the resource link of the referenced Crossplane Cluster managed resource.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -90,7 +90,7 @@ spec:
                     - name
                     type: object
                   clusterSelector:
-                    description: ClusterSelector selects a reference to resolve the resource link of the referenced Crossplane GKECluster managed resource.
+                    description: ClusterSelector selects a reference to resolve the resource link of the referenced Crossplane Cluster managed resource.
                     properties:
                       matchControllerRef:
                         description: MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.
@@ -207,7 +207,7 @@ spec:
                         description: 'WorkloadMetadataConfig: The workload metadata configuration for this node.'
                         properties:
                           nodeMetadata:
-                            description: "NodeMetadata: NodeMetadata is the configuration for how to expose metadata to the workloads running on the node. \n Possible values:   \"UNSPECIFIED\" - Not set.   \"SECURE\" - Prevent workloads not in hostGKECluster from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. \n Metadata concealment is a temporary security solution available while the bootstrapping process for cluster nodes is being redesigned with significant security improvements.  This feature is scheduled to be deprecated in the future and later removed.   \"EXPOSE\" - Expose all VM metadata to pods.   \"GKE_METADATA_SERVER\" - Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level."
+                            description: "NodeMetadata: NodeMetadata is the configuration for how to expose metadata to the workloads running on the node. \n Possible values:   \"UNSPECIFIED\" - Not set.   \"SECURE\" - Prevent workloads not in hostCluster from accessing certain VM metadata, specifically kube-env, which contains Kubelet credentials, and the instance identity token. \n Metadata concealment is a temporary security solution available while the bootstrapping process for cluster nodes is being redesigned with significant security improvements.  This feature is scheduled to be deprecated in the future and later removed.   \"EXPOSE\" - Expose all VM metadata to pods.   \"GKE_METADATA_SERVER\" - Run the GKE Metadata Server on this node. The GKE Metadata Server exposes a metadata API to workloads that is compatible with the V1 Compute Metadata APIs exposed by the Compute Engine and App Engine Metadata Servers. This feature can only be enabled if Workload Identity is enabled at the cluster level."
                             type: string
                         required:
                         - nodeMetadata
