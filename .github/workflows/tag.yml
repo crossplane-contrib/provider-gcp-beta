@@ -1,4 +1,4 @@
-name: Tag2
+name: Tag
 
 on:
   workflow_dispatch:

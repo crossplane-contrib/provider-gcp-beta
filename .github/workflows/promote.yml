@@ -1,4 +1,4 @@
-name: Promote2
+name: Promote
 
 on:
   workflow_dispatch:
