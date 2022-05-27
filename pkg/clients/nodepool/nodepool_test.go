@@ -23,9 +23,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	container "google.golang.org/api/container/v1beta1"
 
-	"github.com/crossplane/provider-gcp-beta/apis/container/v1alpha1"
-	"github.com/crossplane/provider-gcp-beta/apis/container/v1beta1"
-	gcp "github.com/crossplane/provider-gcp-beta/pkg/clients"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis/container/v1alpha1"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis/container/v1beta1"
+	gcp "github.com/crossplane-contrib/provider-gcp-beta/pkg/clients"
 )
 
 const (

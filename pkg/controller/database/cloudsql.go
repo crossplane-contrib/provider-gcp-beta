@@ -37,9 +37,9 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/reconciler/managed"
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	"github.com/crossplane/provider-gcp-beta/apis/database/v1beta1"
-	gcp "github.com/crossplane/provider-gcp-beta/pkg/clients"
-	"github.com/crossplane/provider-gcp-beta/pkg/clients/cloudsql"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis/database/v1beta1"
+	gcp "github.com/crossplane-contrib/provider-gcp-beta/pkg/clients"
+	"github.com/crossplane-contrib/provider-gcp-beta/pkg/clients/cloudsql"
 )
 
 const (

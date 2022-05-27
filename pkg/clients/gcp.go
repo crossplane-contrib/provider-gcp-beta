@@ -31,8 +31,8 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 
-	"github.com/crossplane/provider-gcp-beta/apis/v1alpha3"
-	"github.com/crossplane/provider-gcp-beta/apis/v1beta1"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis/v1alpha3"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis/v1beta1"
 )
 
 // GetAuthInfo returns the necessary authentication information that is necessary

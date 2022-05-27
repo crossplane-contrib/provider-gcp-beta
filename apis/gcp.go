@@ -20,11 +20,11 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	containerv1alpha1 "github.com/crossplane/provider-gcp-beta/apis/container/v1alpha1"
-	containerv1beta1 "github.com/crossplane/provider-gcp-beta/apis/container/v1beta1"
-	databasev1beta1 "github.com/crossplane/provider-gcp-beta/apis/database/v1beta1"
-	gcpv1alpha3 "github.com/crossplane/provider-gcp-beta/apis/v1alpha3"
-	gcpv1beta1 "github.com/crossplane/provider-gcp-beta/apis/v1beta1"
+	containerv1alpha1 "github.com/crossplane-contrib/provider-gcp-beta/apis/container/v1alpha1"
+	containerv1beta1 "github.com/crossplane-contrib/provider-gcp-beta/apis/container/v1beta1"
+	databasev1beta1 "github.com/crossplane-contrib/provider-gcp-beta/apis/database/v1beta1"
+	gcpv1alpha3 "github.com/crossplane-contrib/provider-gcp-beta/apis/v1alpha3"
+	gcpv1beta1 "github.com/crossplane-contrib/provider-gcp-beta/apis/v1beta1"
 )
 
 func init() {
