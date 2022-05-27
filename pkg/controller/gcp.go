@@ -22,9 +22,9 @@ import (
 
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 
-	"github.com/crossplane/provider-gcp-beta/pkg/controller/config"
-	"github.com/crossplane/provider-gcp-beta/pkg/controller/container"
-	"github.com/crossplane/provider-gcp-beta/pkg/controller/database"
+	"github.com/crossplane-contrib/provider-gcp-beta/pkg/controller/config"
+	"github.com/crossplane-contrib/provider-gcp-beta/pkg/controller/container"
+	"github.com/crossplane-contrib/provider-gcp-beta/pkg/controller/database"
 )
 
 // Setup creates all GCP controllers with the supplied logger and adds them to

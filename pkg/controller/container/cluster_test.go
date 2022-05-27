@@ -40,8 +40,8 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/resource"
 	"github.com/crossplane/crossplane-runtime/pkg/test"
 
-	"github.com/crossplane/provider-gcp-beta/apis/container/v1beta1"
-	gke "github.com/crossplane/provider-gcp-beta/pkg/clients/cluster"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis/container/v1beta1"
+	gke "github.com/crossplane-contrib/provider-gcp-beta/pkg/clients/cluster"
 )
 
 const (

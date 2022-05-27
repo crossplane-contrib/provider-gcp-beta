@@ -28,8 +28,8 @@ import (
 	container "google.golang.org/api/container/v1beta1"
 	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
 
-	"github.com/crossplane/provider-gcp-beta/apis/container/v1beta1"
-	gcp "github.com/crossplane/provider-gcp-beta/pkg/clients"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis/container/v1beta1"
+	gcp "github.com/crossplane-contrib/provider-gcp-beta/pkg/clients"
 )
 
 const (

@@ -27,8 +27,8 @@ import (
 	"github.com/crossplane/crossplane-runtime/pkg/logging"
 	"github.com/crossplane/crossplane-runtime/pkg/ratelimiter"
 
-	"github.com/crossplane/provider-gcp-beta/apis"
-	"github.com/crossplane/provider-gcp-beta/pkg/controller"
+	"github.com/crossplane-contrib/provider-gcp-beta/apis"
+	"github.com/crossplane-contrib/provider-gcp-beta/pkg/controller"
 )
 
 func main() {
