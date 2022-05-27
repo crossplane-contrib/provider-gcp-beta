@@ -1,4 +1,4 @@
-module github.com/crossplane/provider-gcp-beta
+module github.com/crossplane-contrib/provider-gcp-beta
 
 go 1.16
 
